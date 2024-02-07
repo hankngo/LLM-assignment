@@ -9,13 +9,18 @@ def get_sentiment(text):
     
     # Determine the sentiment
     if polarity > 0:
-        return "positive"
+        return "Positive"
     elif polarity < 0:
-        return "negative"
+        return "Negative"
     else:
-        return "neutral"
+        return "Neutral"
 
-# Example usage
-text = "I love this beautiful day"
-sentiment = get_sentiment(text)
-print(f"The sentiment of the text is: {sentiment}")
+if __name__ == '__main__':
+    # Read input from the user
+    user_input = input("Enter a sentence to analyze its sentiment: ")
+    
+    # Analyze the sentiment of the user's input
+    sentiment = get_sentiment(user_input)
+    
+    # Display the result
+    print(f"The sentiment of the text is: {sentiment}")
